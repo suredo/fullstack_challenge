@@ -1,5 +1,6 @@
 import express from "express";
 import * as db from "./db";
+import { Routes } from "./routes";
 
 export class Server {
   private app: express.Application;
@@ -23,6 +24,7 @@ export class Server {
   /**Middlewares setup*/
   private setupExpress() {
     this.app.use(express.json());
+    this.app.use(new Routes().getEndpoins());
   }
 
   /**Initilizes server at given port*/
