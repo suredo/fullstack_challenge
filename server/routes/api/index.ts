@@ -1,4 +1,7 @@
 import { Router } from "express";
+import { BookController } from "../../controllers/book";
+
+const book = new BookController();
 
 export class Api {
   private routes: Router;
@@ -9,9 +12,7 @@ export class Api {
   }
 
   private endpoints() {
-    this.routes.post("/addbook", (req, res) => {
-      res.send("add book");
-    });
+    this.routes.post("/addbook", book.addBook);
     this.routes.get("/books", (req, res) => {
       res.send("get books");
     });
