@@ -13,9 +13,7 @@ export class Api {
 
   private endpoints() {
     this.routes.post("/addbook", book.addBook);
-    this.routes.get("/books", (req, res) => {
-      res.send("get books");
-    });
+    this.routes.get("/books", book.getBooks);
     this.routes.get("/book", (req, res) => {
       res.send("get book");
     });
