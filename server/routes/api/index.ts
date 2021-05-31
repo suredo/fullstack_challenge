@@ -15,6 +15,7 @@ export class Api {
     this.routes.post("/addbook", book.addBook);
     this.routes.get("/books", book.getBooks);
     this.routes.get("/book/:id", book.getBook);
+    this.routes.get("/search/:text", book.getBooksBySearch);
   }
 
   /**Returns routes */

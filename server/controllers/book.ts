@@ -51,4 +51,24 @@ export class BookController {
         })
       );
   }
+
+  public getBooksBySearch(req: Request, res: Response) {
+    Book.find({ title: { $regex: req.params.text, $options: "i" } })
+      .then((data) => {
+        if (data) {
+          return res.status(200).send({ success: true, books: data });
+        } else {
+          res.status(404).send({
+            success: false,
+            msg: "There's no book registered yet.",
+          });
+        }
+      })
+      .catch((err) =>
+        res.status(500).send({
+          success: false,
+          err,
+        })
+      );
+  }
 }
