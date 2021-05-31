@@ -1,4 +1,5 @@
 import express from "express";
+import cors from "cors";
 import * as db from "./db";
 import { Routes } from "./routes";
 
@@ -24,6 +25,7 @@ export class Server {
   /**Middlewares setup*/
   private setupExpress() {
     this.app.use(express.json());
+    this.app.use(cors());
     this.app.use(new Routes().getEndpoins());
   }
 

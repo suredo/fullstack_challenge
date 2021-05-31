@@ -33,7 +33,7 @@ export const Input = styled.input`
 `;
 
 export const TextArea = styled.textarea`
-  height: 228px;
+  height: 220px;
   background: #fdfcfc;
   box-shadow: 5px 5px 80px rgba(212, 173, 134, 0.4926);
   border-radius: 10px;
@@ -44,4 +44,16 @@ export const TextArea = styled.textarea`
   :focus {
     outline: none;
   }
+`;
+
+export const Button = styled.button`
+  border: none;
+  background-color: white;
+  color: #ff6978;
+  font-size: 30px;
+  font-weight: 500px;
+  padding: 5px;
+  margin-top: 10px;
+  border-radius: 10px;
+  width: 100%;
 `;
