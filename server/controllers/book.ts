@@ -12,6 +12,26 @@ export class BookController {
       );
   }
 
+  public getBook(req: Request, res: Response) {
+    Book.findOne({ _id: req.params.id })
+      .then((data) => {
+        if (data) {
+          return res.status(200).send({ success: true, userData: data });
+        } else {
+          res.status(404).send({
+            success: false,
+            msg: "There's no book registered yet.",
+          });
+        }
+      })
+      .catch((err) =>
+        res.status(500).send({
+          success: false,
+          err,
+        })
+      );
+  }
+
   public getBooks(req: Request, res: Response) {
     Book.find()
       .then((data) => {
