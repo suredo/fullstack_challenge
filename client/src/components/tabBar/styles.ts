@@ -7,7 +7,7 @@ export const Container = styled.div`
   width: calc(100vw - 110px);
   height: 59px;
   padding: 0 55px;
-  position: absolute;
+  position: fixed;
   bottom: 4px;
   display: flex;
   justify-content: space-between;

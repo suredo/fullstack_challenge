@@ -11,7 +11,7 @@ import { useLocation } from "react-router-dom";
 
 const TabBar = () => {
   const location = useLocation();
-  return (
+  return location.pathname !== "/detail" ? (
     <Container>
       <Tab>
         <TabLink to="/" path={location.pathname} tabname="/">
@@ -32,7 +32,7 @@ const TabBar = () => {
         </TabLink>
       </Tab>
     </Container>
-  );
+  ) : null;
 };
 
 export default TabBar;
