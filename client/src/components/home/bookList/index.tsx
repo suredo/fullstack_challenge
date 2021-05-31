@@ -8,23 +8,20 @@ interface IBook {
   description: string;
   author: string;
 }
-const BookList = () => {
-  const [books, setBooks] = useState<IBook[]>();
-  useEffect(() => {
-    getBooks().then((data) => setBooks(data.books));
-  }, []);
+interface IBooks {
+  books: IBook[];
+}
+const BookList = ({ books }: IBooks) => {
   return (
     <Container>
-      {books
-        ? books.map((book) => (
-            <BookItem
-              key={book._id}
-              id={book._id}
-              title={book.title}
-              author={book.author}
-            />
-          ))
-        : null}
+      {books.map((book) => (
+        <BookItem
+          key={book._id}
+          id={book._id}
+          title={book.title}
+          author={book.author}
+        />
+      ))}
     </Container>
   );
 };

@@ -1,14 +1,17 @@
 import { useState } from "react";
 import { Container, Input, SearchIcon } from "./style";
-
-const Search = () => {
-  const [input, setInput] = useState<string>("");
+interface ISearch {
+  value: string;
+  setSearch: (e: string) => void;
+}
+const Search = ({ value, setSearch }: ISearch) => {
   return (
     <Container>
       <SearchIcon />
       <Input
-        value={input}
-        onChange={(e) => setInput(e.target.value)}
+        type="string"
+        value={value}
+        onChange={(e) => setSearch(e.target.value)}
         placeholder="Search book"
       />
     </Container>

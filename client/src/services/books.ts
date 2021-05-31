@@ -27,3 +27,9 @@ export const getBook = async (id: string) => {
 
   return request.json();
 };
+
+export const getBooksBySearch = async (text: string) => {
+  const request = await fetch(`http://localhost:3003/api/search/${text}`);
+
+  return request.json();
+};

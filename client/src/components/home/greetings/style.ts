@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const Greeting = styled.h1`
   color: #54565a;
   font-size: 24px;
+  margin: 0;
   margin-top: 30px;
-  margin-bottom: 36px;
 `;
 
 export const Username = styled.span`
