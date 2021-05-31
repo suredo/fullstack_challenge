@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
+import TabBar from "./components/tabBar";
 import Create from "./pages/create";
 import Detail from "./pages/detail";
 import Home from "./pages/home";
@@ -18,6 +19,7 @@ function App() {
           <Create />
         </Route>
       </Switch>
+      <TabBar />
     </BrowserRouter>
   );
 }
