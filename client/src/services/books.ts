@@ -16,8 +16,8 @@ export const addBook = async (book: IBook) => {
   return request.json();
 };
 
-export const getBooks = async () => {
-  const request = await fetch("http://localhost:3003/api/books");
+export const getBooks = async (page: number) => {
+  const request = await fetch(`http://localhost:3003/api/books/${page}`);
 
   return request.json();
 };
@@ -28,8 +28,10 @@ export const getBook = async (id: string) => {
   return request.json();
 };
 
-export const getBooksBySearch = async (text: string) => {
-  const request = await fetch(`http://localhost:3003/api/search/${text}`);
+export const getBooksBySearch = async (text: string, page: number) => {
+  const request = await fetch(
+    `http://localhost:3003/api/search/${text}/${page}`
+  );
 
   return request.json();
 };

@@ -34,6 +34,7 @@ export class BookController {
 
   public getBooks(req: Request, res: Response) {
     Book.find()
+      .limit(parseInt(req.params.page) * 6)
       .then((data) => {
         if (data) {
           return res.status(200).send({ success: true, books: data });
@@ -54,6 +55,7 @@ export class BookController {
 
   public getBooksBySearch(req: Request, res: Response) {
     Book.find({ title: { $regex: req.params.text, $options: "i" } })
+      .limit(parseInt(req.params.page) * 6)
       .then((data) => {
         if (data) {
           return res.status(200).send({ success: true, books: data });

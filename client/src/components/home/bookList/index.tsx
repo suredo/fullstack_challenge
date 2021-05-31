@@ -1,5 +1,3 @@
-import { useEffect, useState } from "react";
-import { getBooks } from "../../../services/books";
 import BookItem from "./bookItem";
 import { Container } from "./style";
 interface IBook {

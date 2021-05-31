@@ -13,6 +13,32 @@ export const Header = styled.div`
   position: relative;
 `;
 
+export const Back = styled.img`
+  position: absolute;
+  top: 0;
+  right: 0;
+`;
+export const Back1 = styled.img`
+  position: absolute;
+  top: 125px;
+  left: 47px;
+`;
+export const Back2 = styled.img`
+  position: absolute;
+  top: 218px;
+  right: 80px;
+`;
+export const Back3 = styled.img`
+  position: absolute;
+  top: 115px;
+  left: 74px;
+`;
+export const Back4 = styled.img`
+  position: absolute;
+  top: 86px;
+  right: 95px;
+`;
+
 export const Cover = styled.img`
   width: 151px;
   height: 234px;
@@ -23,6 +49,7 @@ export const Cover = styled.img`
   background-color: red;
   box-shadow: 0px 10px 10px rgba(107, 103, 70, 0.3);
   border-radius: 5px;
+  z-index: 1;
 `;
 
 export const Content = styled.div`

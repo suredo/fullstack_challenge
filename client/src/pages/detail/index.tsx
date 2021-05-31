@@ -7,11 +7,21 @@ import {
   Title,
   Author,
   Description,
+  Back,
+  Back1,
+  Back2,
+  Back3,
+  Back4,
 } from "./style";
 import { useHistory, useParams } from "react-router-dom";
 import TabBar from "../../components/detail/tabBar";
 import { useEffect, useState } from "react";
 import { getBook } from "../../services/books";
+import Img from "../../assets/Oval.png";
+import Img1 from "../../assets/Oval1.png";
+import Img2 from "../../assets/Oval2.png";
+import Img3 from "../../assets/Oval3.png";
+import Img4 from "../../assets/Oval4.png";
 
 interface ParamTypes {
   id: string;
@@ -33,6 +43,11 @@ const Detail = () => {
   return (
     <Container>
       <Header>
+        <Back src={Img} />
+        <Back1 src={Img1} />
+        <Back2 src={Img2} />
+        <Back3 src={Img3} />
+        <Back4 src={Img4} />
         <BackIcon onClick={history.goBack} />
         <Cover />
       </Header>

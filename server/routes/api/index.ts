@@ -13,9 +13,9 @@ export class Api {
 
   private endpoints() {
     this.routes.post("/addbook", book.addBook);
-    this.routes.get("/books", book.getBooks);
+    this.routes.get("/books/:page", book.getBooks);
     this.routes.get("/book/:id", book.getBook);
-    this.routes.get("/search/:text", book.getBooksBySearch);
+    this.routes.get("/search/:text/:page", book.getBooksBySearch);
   }
 
   /**Returns routes */

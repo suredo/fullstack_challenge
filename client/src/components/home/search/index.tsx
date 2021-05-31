@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Container, Input, SearchIcon } from "./style";
 interface ISearch {
   value: string;
