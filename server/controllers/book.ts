@@ -16,7 +16,7 @@ export class BookController {
     Book.findOne({ _id: req.params.id })
       .then((data) => {
         if (data) {
-          return res.status(200).send({ success: true, userData: data });
+          return res.status(200).send({ success: true, book: data });
         } else {
           res.status(404).send({
             success: false,
@@ -36,7 +36,7 @@ export class BookController {
     Book.find()
       .then((data) => {
         if (data) {
-          return res.status(200).send({ success: true, userData: data });
+          return res.status(200).send({ success: true, books: data });
         } else {
           res.status(404).send({
             success: false,

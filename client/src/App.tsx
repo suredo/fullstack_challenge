@@ -12,7 +12,7 @@ function App() {
         <Route path="/" exact>
           <Home />
         </Route>
-        <Route path="/detail" exact>
+        <Route path="/detail/:id" exact>
           <Detail />
         </Route>
         <Route path="/create" exact>

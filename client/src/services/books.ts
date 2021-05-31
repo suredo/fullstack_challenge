@@ -15,3 +15,15 @@ export const addBook = async (book: IBook) => {
 
   return request.json();
 };
+
+export const getBooks = async () => {
+  const request = await fetch("http://localhost:3003/api/books");
+
+  return request.json();
+};
+
+export const getBook = async (id: string) => {
+  const request = await fetch(`http://localhost:3003/api/book/${id}`);
+
+  return request.json();
+};

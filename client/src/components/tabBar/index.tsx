@@ -11,7 +11,7 @@ import { useLocation } from "react-router-dom";
 
 const TabBar = () => {
   const location = useLocation();
-  return location.pathname !== "/detail" ? (
+  return !location.pathname.includes("/detail") ? (
     <Container>
       <Tab>
         <TabLink to="/" path={location.pathname} tabname="/">
