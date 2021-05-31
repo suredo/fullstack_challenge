@@ -1,3 +1,10 @@
-const Home = () => <h1>Home</h1>;
+import Search from "../../components/home/search";
+import { Container } from "./style";
+
+const Home = () => (
+  <Container>
+    <Search />
+  </Container>
+);
 
 export default Home;

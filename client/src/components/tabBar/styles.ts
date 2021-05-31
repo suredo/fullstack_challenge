@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { HomeAlt, Plus, User } from "@styled-icons/boxicons-regular";
 
 export const Container = styled.div`
+  background-color: white;
   width: calc(100vw - 110px);
   height: 59px;
   padding: 0 55px;
